@@ -4,35 +4,35 @@ using UnityEngine;
 
 public class PlayerState
 {
-    protected PlayerStateMachine stateMachine;
-    protected Player player;
+    protected readonly PlayerStateMachine stateMachine;
+    protected readonly Player player;
     protected Rigidbody rb;
 
     protected float xInput;
 
-    private string animBoolName;
+    private readonly string _animBoolName;
 
-    public PlayerState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName)
+    public PlayerState(Player player, PlayerStateMachine stateMachine, string animBoolName)
     {
-        this.player = _player;
-        this.stateMachine = _stateMachine;
-        this.animBoolName = _animBoolName;
+        this.player = player;
+        this.stateMachine = stateMachine;
+        this._animBoolName = animBoolName;
     }
 
     public virtual void Enter()
     {
-        player.anim.SetBool(animBoolName, true);
-        rb = player.rb;
+        player.Anim.SetBool(_animBoolName, true);
+        rb = player.Rb;
     }
 
     public virtual void Update()
     {
         xInput = Input.GetAxisRaw("Horizontal");
-        player.anim.SetFloat("yVelocity", rb.velocity.y);
+        player.Anim.SetFloat("yVelocity", rb.velocity.y);
     }
 
     public virtual void Exit()
     {
-        player.anim.SetBool(animBoolName, false);
+        player.Anim.SetBool(_animBoolName, false);
     }
 }

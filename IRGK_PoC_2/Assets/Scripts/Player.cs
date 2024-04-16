@@ -11,45 +11,46 @@ public class Player : MonoBehaviour
     public float jumpForce;
     
     #region Components
-    public Animator anim { get; private set; }
-    public Rigidbody rb { get; private set; }
+    public Animator Anim { get; private set; }
+    public Rigidbody Rb { get; private set; }
 
     #endregion
 
     #region States
-    public PlayerStateMachine stateMachine { get; private set; }
-    public PlayerIdleState idleState { get; private set; }
-    public PlayerMoveState moveState { get; private set; }
-    public PlayerJumpState jumpState { get; private set; }
-    public PlayerAirState airState { get; private set; }
+
+    private PlayerStateMachine _stateMachine;
+    public PlayerIdleState IdleState { get; private set; }
+    public PlayerMoveState MoveState { get; private set; }
+    public PlayerJumpState JumpState { get; private set; }
+    public PlayerAirState AirState { get; private set; }
     
     #endregion
 
     private void Awake()
     {
-        stateMachine = new PlayerStateMachine();
-        idleState = new PlayerIdleState(this, stateMachine, "Idle");
-        moveState = new PlayerMoveState(this, stateMachine, "Move");
-        jumpState = new PlayerJumpState(this, stateMachine, "Jump");
-        airState  = new PlayerAirState(this, stateMachine, "Jump");
+        _stateMachine = new PlayerStateMachine();
+        IdleState = new PlayerIdleState(this, _stateMachine, "Idle");
+        MoveState = new PlayerMoveState(this, _stateMachine, "Move");
+        JumpState = new PlayerJumpState(this, _stateMachine, "Jump");
+        AirState  = new PlayerAirState(this, _stateMachine, "Jump");
     }
 
     private void Start()
     {
-        anim = GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody>();
+        Anim = GetComponentInChildren<Animator>();
+        Rb = GetComponent<Rigidbody>();
         moveSpeed = 9f;
         
-        stateMachine.Initialize(idleState);
+        _stateMachine.Initialize(IdleState);
     }
 
     private void Update()
     {
-        stateMachine.currentState.Update();
+        _stateMachine.CurrentState.Update();
     }
 
     public void SetVelocity(float xVelocity, float yVelocity)
     {
-        rb.velocity = new Vector3(xVelocity, yVelocity);
+        Rb.velocity = new Vector3(xVelocity, yVelocity);
     }
 }

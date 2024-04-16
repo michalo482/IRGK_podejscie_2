@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerIdleState : PlayerGroundedState
 {
-    public PlayerIdleState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    public PlayerIdleState(Player player, PlayerStateMachine stateMachine, string animBoolName) : base(player, stateMachine, animBoolName)
     {
         
     }
@@ -20,7 +20,7 @@ public class PlayerIdleState : PlayerGroundedState
 
         if (xInput != 0)
         {
-            stateMachine.ChangeState(player.moveState);
+            stateMachine.ChangeState(player.MoveState);
         }
     }
 
