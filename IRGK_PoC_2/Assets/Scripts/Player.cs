@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Player : MonoBehaviour
     #region Components
     public Animator Anim { get; private set; }
     public Rigidbody Rb { get; private set; }
+    public InputActionReference movement;
 
     #endregion
 
