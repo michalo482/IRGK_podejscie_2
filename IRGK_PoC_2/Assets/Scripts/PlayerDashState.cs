@@ -19,18 +19,25 @@ public class PlayerDashState : PlayerState
     {
         base.Update();
         
-        player.SetVelocity(player.dashSpeed * player.FacingDirection, 0);
+        player.SetVelocity(player.dashSpeed * player.FacingDirection, rb.velocity.y);
         
         
         if (player.stateTimer < 0)
         {
-            stateMachine.ChangeState(player.IdleState);
+            if (rb.velocity.y == 0)
+            {
+                stateMachine.ChangeState(player.IdleState);
+            }
+            else
+            {
+                stateMachine.ChangeState(player.AirState);
+            }
         }
     }
 
     public override void Exit()
     {
         base.Exit();
-        player.SetVelocity(player.xInput * player.moveSpeed, 0);
+        player.SetVelocity(player.xInput * player.moveSpeed, rb.velocity.y);
     }
 }

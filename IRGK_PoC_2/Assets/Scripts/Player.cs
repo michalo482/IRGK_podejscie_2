@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float wallCheckDistance;
     [SerializeField] private LayerMask whatIsGround;
 
+    [SerializeField] private float _velocity;
+
     private const int Multiplayer = -1;
     public int FacingDirection { get; private set; } = 1;
     private bool _facingRight = true;
@@ -69,6 +71,7 @@ public class Player : MonoBehaviour
     {
         Anim = GetComponentInChildren<Animator>();
         Rb = GetComponent<Rigidbody>();
+        
         moveSpeed = 9f;
         
         _stateMachine.Initialize(IdleState);
@@ -84,6 +87,7 @@ public class Player : MonoBehaviour
         dashButton = dash.action.ReadValue<float>();
         _stateMachine.CurrentState.Update();
         CheckForDashInput();
+        _velocity = Rb.velocity.y;
     }
 
     public void SetVelocity(float xVelocity, float yVelocity)

@@ -25,6 +25,10 @@ public class PlayerJumpState : PlayerState
             stateMachine.ChangeState(player.DashState);
             player.stateCooldown = player.dashCooldown;
         }*/
+        if (player.xInput != 0)
+        {
+            player.SetVelocity(player.moveSpeed * 0.8f * player.xInput, rb.velocity.y);
+        }
         
         if (rb.velocity.y < 0)
         {

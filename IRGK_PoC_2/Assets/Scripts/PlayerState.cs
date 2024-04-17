@@ -7,10 +7,9 @@ public class PlayerState
     protected readonly PlayerStateMachine stateMachine;
     protected readonly Player player;
     protected Rigidbody rb;
-
     
-
     private readonly string _animBoolName;
+    private static readonly int YVelocity = Animator.StringToHash("yVelocity");
 
     protected PlayerState(Player player, PlayerStateMachine stateMachine, string animBoolName)
     {
@@ -27,8 +26,7 @@ public class PlayerState
 
     public virtual void Update()
     {
-        
-        player.Anim.SetFloat("yVelocity", rb.velocity.y);
+        player.Anim.SetFloat(YVelocity, rb.velocity.y);
     }
 
     public virtual void Exit()
