@@ -8,11 +8,11 @@ public class PlayerState
     protected readonly Player player;
     protected Rigidbody rb;
 
-    protected float xInput;
+    
 
     private readonly string _animBoolName;
 
-    public PlayerState(Player player, PlayerStateMachine stateMachine, string animBoolName)
+    protected PlayerState(Player player, PlayerStateMachine stateMachine, string animBoolName)
     {
         this.player = player;
         this.stateMachine = stateMachine;
@@ -27,8 +27,7 @@ public class PlayerState
 
     public virtual void Update()
     {
-
-        xInput = player.movement.action.ReadValue<float>();
+        
         player.Anim.SetFloat("yVelocity", rb.velocity.y);
     }
 

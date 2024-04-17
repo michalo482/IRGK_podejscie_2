@@ -9,6 +9,8 @@ public class PlayerGroundedState : PlayerState
         
     }
 
+    
+
     public override void Enter()
     {
         base.Enter();
@@ -17,7 +19,17 @@ public class PlayerGroundedState : PlayerState
     public override void Update()
     {
         base.Update();
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (player.dashButton > 0 && player.stateCooldown < 0)
+        {
+            player.dashDirection = player.xInput;
+            if (player.dashDirection == 0)
+                player.dashDirection = player.FacingDirection;
+            stateMachine.ChangeState(player.DashState);
+            player.stateCooldown = player.dashCooldown;
+        }
+        
+        if (player.yInput > 0 && player.IsGroundDetected())
         {
             stateMachine.ChangeState(player.JumpState);
         }

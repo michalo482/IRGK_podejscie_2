@@ -16,7 +16,12 @@ public class PlayerAirState : PlayerState
     public override void Update()
     {
         base.Update();
-        if (rb.velocity.y == 0)
+        if (player.dashButton > 0 && player.stateCooldown < 0)
+        {
+            stateMachine.ChangeState(player.DashState);
+            player.stateCooldown = player.dashCooldown;
+        }
+        if (player.IsGroundDetected())
         {
             stateMachine.ChangeState(player.IdleState);
         }

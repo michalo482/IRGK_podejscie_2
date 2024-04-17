@@ -19,6 +19,13 @@ public class PlayerJumpState : PlayerState
     public override void Update()
     {
         base.Update();
+     
+        if (player.dashButton > 0 && player.stateCooldown < 0)
+        {
+            stateMachine.ChangeState(player.DashState);
+            player.stateCooldown = player.dashCooldown;
+        }
+        
         if (rb.velocity.y < 0)
         {
             stateMachine.ChangeState(player.AirState);
