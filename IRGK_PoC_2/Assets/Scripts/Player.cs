@@ -83,6 +83,7 @@ public class Player : MonoBehaviour
         yInput = jump.action.ReadValue<float>();
         dashButton = dash.action.ReadValue<float>();
         _stateMachine.CurrentState.Update();
+        CheckForDashInput();
     }
 
     public void SetVelocity(float xVelocity, float yVelocity)
@@ -125,9 +126,13 @@ public class Player : MonoBehaviour
 
     public void CheckForDashInput()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (dashButton > 0 && stateCooldown < 0)
         {
+            dashDirection = xInput;
+            if (dashDirection == 0)
+                dashDirection = FacingDirection;
             _stateMachine.ChangeState(DashState);
+            stateCooldown = dashCooldown;
         }
     }
 }

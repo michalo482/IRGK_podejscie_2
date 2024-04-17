@@ -20,14 +20,14 @@ public class PlayerGroundedState : PlayerState
     {
         base.Update();
 
-        if (player.dashButton > 0 && player.stateCooldown < 0)
+        /*if (player.dashButton > 0 && player.stateCooldown < 0)
         {
             player.dashDirection = player.xInput;
             if (player.dashDirection == 0)
                 player.dashDirection = player.FacingDirection;
             stateMachine.ChangeState(player.DashState);
             player.stateCooldown = player.dashCooldown;
-        }
+        }*/
         
         if (player.yInput > 0 && player.IsGroundDetected())
         {
