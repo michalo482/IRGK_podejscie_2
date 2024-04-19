@@ -28,10 +28,21 @@ public class PlayerGroundedState : PlayerState
             stateMachine.ChangeState(player.DashState);
             player.stateCooldown = player.dashCooldown;
         }*/
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            stateMachine.ChangeState(player.PrimaryAttackState);
+            //rb.velocity = new Vector3(0, 0);
+        }
         
-        if (player.yInput > 0 && player.IsGroundDetected())
+        if (player.jumpButton > 0 && player.IsGroundDetected())
         {
             stateMachine.ChangeState(player.JumpState);
+        }
+
+        if (!player.IsGroundDetected())
+        {
+            stateMachine.ChangeState(player.AirState);
         }
     }
 

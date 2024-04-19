@@ -17,14 +17,17 @@ public class PlayerMoveState : PlayerGroundedState
     public override void Update()
     {
         base.Update();
-        
-        player.FlipController(player.xInput);
-        player.SetVelocity(player.xInput * player.moveSpeed, rb.velocity.y);
-        
         if (player.xInput == 0)
         {
             stateMachine.ChangeState(player.IdleState);
         }
+
+        player.FlipController(player.xInput);
+            
+        player.SetVelocity(player.xInput * player.moveSpeed, rb.velocity.y);
+        
+        
+        
     }
 
     public override void Exit()

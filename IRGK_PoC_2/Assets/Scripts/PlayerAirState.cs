@@ -21,6 +21,10 @@ public class PlayerAirState : PlayerState
             stateMachine.ChangeState(player.DashState);
             player.stateCooldown = player.dashCooldown;
         }*/
+        if (player.IsWallDetected())
+        {
+            stateMachine.ChangeState(player.WallSlideState);
+        }
         if (player.IsGroundDetected())
         {
             stateMachine.ChangeState(player.IdleState);

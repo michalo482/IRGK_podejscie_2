@@ -7,6 +7,8 @@ public class PlayerState
     protected readonly PlayerStateMachine stateMachine;
     protected readonly Player player;
     protected Rigidbody rb;
+
+    protected bool triggerCalled;
     
     private readonly string _animBoolName;
     private static readonly int YVelocity = Animator.StringToHash("yVelocity");
@@ -22,6 +24,7 @@ public class PlayerState
     {
         player.Anim.SetBool(_animBoolName, true);
         rb = player.Rb;
+        triggerCalled = false;
     }
 
     public virtual void Update()
@@ -32,5 +35,10 @@ public class PlayerState
     public virtual void Exit()
     {
         player.Anim.SetBool(_animBoolName, false);
+    }
+
+    public virtual void AnimationFinishTrigger()
+    {
+        triggerCalled = true;
     }
 }

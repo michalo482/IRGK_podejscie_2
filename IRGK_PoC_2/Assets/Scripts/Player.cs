@@ -31,8 +31,10 @@ public class Player : MonoBehaviour
     private bool _facingRight = true;
     
     public float xInput;
-    public float yInput;
+    [FormerlySerializedAs("yInput")] public float jumpButton;
+    public float yInput; 
     public float dashButton;
+    public bool attackButton;
 
     public float stateTimer;
     public float stateCooldown;
@@ -43,6 +45,8 @@ public class Player : MonoBehaviour
     public InputActionReference movement;
     public InputActionReference jump;
     public InputActionReference dash;
+    public InputActionReference upAndDown;
+    public InputActionReference attack;
 
     #endregion
 
@@ -54,6 +58,10 @@ public class Player : MonoBehaviour
     public PlayerJumpState JumpState { get; private set; }
     public PlayerAirState AirState { get; private set; }
     public PlayerDashState DashState { get; private set; }
+    public PlayerWallSlideState WallSlideState { get; private set; }
+    public PlayerWallJumpState WallJumpState { get; private set; }
+    
+    public PlayerPrimaryAttackState PrimaryAttackState { get; private set; }
     
     #endregion
 
@@ -65,6 +73,10 @@ public class Player : MonoBehaviour
         JumpState = new PlayerJumpState(this, _stateMachine, "Jump");
         AirState  = new PlayerAirState(this, _stateMachine, "Jump");
         DashState = new PlayerDashState(this, _stateMachine, "Dash");
+        WallSlideState = new PlayerWallSlideState(this, _stateMachine, "WallSlide");
+        WallJumpState = new PlayerWallJumpState(this, _stateMachine, "Jump");
+
+        PrimaryAttackState = new PlayerPrimaryAttackState(this, _stateMachine, "Attack");
     }
 
     private void Start()
@@ -83,8 +95,10 @@ public class Player : MonoBehaviour
         stateCooldown -= Time.deltaTime;
         
         xInput = movement.action.ReadValue<float>();
-        yInput = jump.action.ReadValue<float>();
+        jumpButton = jump.action.ReadValue<float>();
         dashButton = dash.action.ReadValue<float>();
+        yInput = upAndDown.action.ReadValue<float>();
+        attackButton = attack.action.IsPressed();
         _stateMachine.CurrentState.Update();
         CheckForDashInput();
         _velocity = Rb.velocity.y;
@@ -99,6 +113,11 @@ public class Player : MonoBehaviour
 
     public bool IsGroundDetected() =>
         Physics.Raycast(groundCheck.position, Vector3.down, groundCheckDistance, whatIsGround);
+
+    public bool IsWallDetected() =>
+        Physics.Raycast(wallCheck.position, Vector3.right * FacingDirection, wallCheckDistance, whatIsGround);
+
+    public void AnimationTrigger() => _stateMachine.CurrentState.AnimationFinishTrigger();
     private void OnDrawGizmos()
     {
         var groundCheckPosition = groundCheck.position;
@@ -114,6 +133,7 @@ public class Player : MonoBehaviour
         var currentScale = transform1.localScale;
         currentScale.x *= Multiplayer;
         transform1.localScale = currentScale;
+        
         _facingRight = !_facingRight;
     }
 
@@ -130,6 +150,9 @@ public class Player : MonoBehaviour
 
     public void CheckForDashInput()
     {
+        if (IsWallDetected())
+            return;
+        
         if (dashButton > 0 && stateCooldown < 0)
         {
             dashDirection = xInput;
