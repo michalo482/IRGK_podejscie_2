@@ -1,0 +1,872 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.24f1 (334eb2a0b267) revision 3362482'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Education' Language: 'en' Physical Memory: 8112 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Program Files\Unity Editor\2022.3.24f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/git/IRGK_podejscie_2/IRGK_PoC_2
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+13672
+Successfully changed project path to: D:/git/IRGK_podejscie_2/IRGK_PoC_2
+D:/git/IRGK_podejscie_2/IRGK_PoC_2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [15072] Host "[IP] 192.168.8.119 [Port] 0 [Flags] 2 [Guid] 2919394246 [EditorId] 2919394246 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EM8AVSG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [15072] Host "[IP] 192.168.8.119 [Port] 0 [Flags] 2 [Guid] 2919394246 [EditorId] 2919394246 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EM8AVSG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
+Refreshing native plugins compatible for Editor in 11.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.24f1 (334eb2a0b267)
+[Subsystems] Discovering subsystems at path D:/Program Files/Unity Editor/2022.3.24f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/git/IRGK_podejscie_2/IRGK_PoC_2/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 Ti (ID=0x2191)
+    Vendor:   NVIDIA
+    VRAM:     5979 MB
+    Driver:   31.0.15.2824
+Initialize mono
+Mono path[0] = 'D:/Program Files/Unity Editor/2022.3.24f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Program Files/Unity Editor/2022.3.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Program Files/Unity Editor/2022.3.24f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56480
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Program Files/Unity Editor/2022.3.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007922 seconds.
+- Loaded All Assemblies, in  0.697 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.423 seconds
+Domain Reload Profiling: 1121ms
+	BeginReloadAssembly (225ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (73ms)
+	RebuildNativeTypeToScriptingClass (27ms)
+	initialDomainReloadingComplete (120ms)
+	LoadAllAssembliesAndSetupDomain (251ms)
+		LoadAssemblies (223ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (249ms)
+			TypeCache.Refresh (247ms)
+				TypeCache.ScanAssembly (225ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (424ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (346ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (12ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (244ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.965 seconds
+Refreshing native plugins compatible for Editor in 2.98 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.213 seconds
+Domain Reload Profiling: 2179ms
+	BeginReloadAssembly (208ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (61ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (623ms)
+		LoadAssemblies (450ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (294ms)
+			TypeCache.Refresh (244ms)
+				TypeCache.ScanAssembly (221ms)
+			ScanForSourceGeneratedMonoScriptInfo (36ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1214ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (862ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (123ms)
+			ProcessInitializeOnLoadAttributes (625ms)
+			ProcessInitializeOnLoadMethodAttributes (95ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 2.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5325 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (353.0 KB). Loaded Objects now: 5784.
+Memory consumption went from 210.8 MB to 210.4 MB.
+Total: 5.056800 ms (FindLiveObjects: 0.777100 ms CreateObjectMapping: 0.810000 ms MarkObjects: 3.140800 ms  DeleteObjects: 0.328100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 107698.991201 seconds.
+  path: Assets/Models
+  artifactKey: Guid(a38dbff5eafe9b741a6cd932b8c04494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models using Guid(a38dbff5eafe9b741a6cd932b8c04494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d9af1ef248d9233bd20a16091934426') in 0.002246 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 22.633925 seconds.
+  path: Assets/Models/Mellarius
+  artifactKey: Guid(a8f1c4cfc97daa44eb809ff007f00327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius using Guid(a8f1c4cfc97daa44eb809ff007f00327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a7043c47a3513eb2215f35c1807a2c1') in 0.000444 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 52.301139 seconds.
+  path: Assets/Models/Mellarius/Mellariuss.fbx
+  artifactKey: Guid(c5127b4df842483479037757f9f142fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Mellariuss.fbx using Guid(c5127b4df842483479037757f9f142fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3afbf7e5eed6a0c512f291f242b2cb36') in 1.011972 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 236
+========================================================================
+Received Import Request.
+  Time since last request: 14.844515 seconds.
+  path: Assets/Models/Mellarius/Beard_Transparency_ao.jpg
+  artifactKey: Guid(3237273bfd22876419f5a14fdd85c9b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Beard_Transparency_ao.jpg using Guid(3237273bfd22876419f5a14fdd85c9b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a159be2a6325bcc83d8d2a64c55d0856') in 0.023282 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Models/Mellarius/THD_Strips_OKSG3_Normal.jpg
+  artifactKey: Guid(2f96969f0bff0d44794c1ab4668e280b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/THD_Strips_OKSG3_Normal.jpg using Guid(2f96969f0bff0d44794c1ab4668e280b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd26c178aabdfcc5f31b48707f74af1b2') in 0.016442 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Models/Mellarius/THD_Strips_OKSG3_Diffuse.jpg
+  artifactKey: Guid(9308f4e30ffb66f48a28247e012bca6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/THD_Strips_OKSG3_Diffuse.jpg using Guid(9308f4e30ffb66f48a28247e012bca6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '718cec969b163eb7bc104c4cdcd6b0c1') in 0.021089 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Models/Mellarius/THD_Strips_OKSG3_ao.jpg
+  artifactKey: Guid(e421bcfeeb191a148bcf5c47ec20c622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/THD_Strips_OKSG3_ao.jpg using Guid(e421bcfeeb191a148bcf5c47ec20c622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea1e659ad79cc0191c85951e05cc2d40') in 0.015305 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Models/Mellarius/Tunic_Diffuse.jpg
+  artifactKey: Guid(b6ade42aace1fdc4492bf8343fe97f71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Tunic_Diffuse.jpg using Guid(b6ade42aace1fdc4492bf8343fe97f71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f622e86e8ac8de65d401d1017593bf6') in 0.016728 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Models/Mellarius/Beard_Transparency_Hair Root Map.jpg
+  artifactKey: Guid(252334c52bdca4b4385c1514046944b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Beard_Transparency_Hair Root Map.jpg using Guid(252334c52bdca4b4385c1514046944b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e86d0dc3527cc8ac308e8dc994b0c03') in 0.013814 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Models/Mellarius/Hair_Transparency_Diffuse.png
+  artifactKey: Guid(faa45ad8d3faa8d4a9b0f343755021a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Hair_Transparency_Diffuse.png using Guid(faa45ad8d3faa8d4a9b0f343755021a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38a92b3a05bd604403ee7c327b5fcfb5') in 0.023982 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Models/Mellarius/THD_Strips_OKSG3_metallic.png
+  artifactKey: Guid(7d7b7e86312b32141a092af407ae7c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/THD_Strips_OKSG3_metallic.png using Guid(7d7b7e86312b32141a092af407ae7c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8af4eca9268dd436fe547c9f471e274d') in 0.014750 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Models/Mellarius/Tunic_ao.jpg
+  artifactKey: Guid(89113697399c5eb49bbddfbcb915a285) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Tunic_ao.jpg using Guid(89113697399c5eb49bbddfbcb915a285) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91bb5126db8378b10237047d6436b9de') in 0.153061 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Models/Mellarius/THD_Gloves_0212SG_ao.jpg
+  artifactKey: Guid(56794d07a4268004ca0c35d486830de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/THD_Gloves_0212SG_ao.jpg using Guid(56794d07a4268004ca0c35d486830de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9b25be9c2338ef529264373b0182749') in 0.022579 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Models/Mellarius/THD_Gloves_0212SG_Diffuse.jpg
+  artifactKey: Guid(251be6d58f0b6e147a6a521881c1dccd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/THD_Gloves_0212SG_Diffuse.jpg using Guid(251be6d58f0b6e147a6a521881c1dccd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2b1d41ad61b63c35f87a21479271d1b') in 0.032843 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Models/Mellarius/Beard_Transparency_Hair Flow Map.png
+  artifactKey: Guid(c791e656e7e2f95478be4bf37cd3b6f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Beard_Transparency_Hair Flow Map.png using Guid(c791e656e7e2f95478be4bf37cd3b6f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c15efe1aa37eb24ddb00c6d95cbdde60') in 0.019049 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Models/Mellarius/Beard_Transparency_metallic.png
+  artifactKey: Guid(e6d820a13d73486438a7835fcb96fff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Beard_Transparency_metallic.png using Guid(e6d820a13d73486438a7835fcb96fff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28f280e77348df665800e8577404f9eb') in 0.008268 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Models/Mellarius/Biker_Jeans_Normal.jpg
+  artifactKey: Guid(484c133057442e745860974aec088516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Biker_Jeans_Normal.jpg using Guid(484c133057442e745860974aec088516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f44a6b678166426aa7e415022f27f1ec') in 0.016847 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Models/Mellarius/Punk_Strap_Boots_ao.jpg
+  artifactKey: Guid(c9dd89af4f191fe48bc31325a22ca5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Punk_Strap_Boots_ao.jpg using Guid(c9dd89af4f191fe48bc31325a22ca5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41d51fe407e884b7aed50a71de039966') in 0.017313 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Models/Mellarius/Hair_Transparency_Hair Flow Map.png
+  artifactKey: Guid(9715f737eb0924a459705e09420d282f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Hair_Transparency_Hair Flow Map.png using Guid(9715f737eb0924a459705e09420d282f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '694ea4872fa9730676aef578f46224d1') in 0.018493 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/Mellarius/Biker_Jeans_Diffuse.jpg
+  artifactKey: Guid(b7d3b9d5bfa88fe408e9a0ab73884028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Biker_Jeans_Diffuse.jpg using Guid(b7d3b9d5bfa88fe408e9a0ab73884028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba08057fe579e89c7cb60b36a18619c7') in 0.018421 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Models/Mellarius/THD_Strips_OKSG1_Diffuse.jpg
+  artifactKey: Guid(098288fe8d7bd954a9ba1f399d134d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/THD_Strips_OKSG1_Diffuse.jpg using Guid(098288fe8d7bd954a9ba1f399d134d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d8c431067fcbb0cf92317872be55ac4') in 0.018144 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Models/Mellarius/THD_Strips_OKSG_Diffuse.jpg
+  artifactKey: Guid(28b65cdb813d84d42a91b9844a4aea87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/THD_Strips_OKSG_Diffuse.jpg using Guid(28b65cdb813d84d42a91b9844a4aea87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '239e7d02e22e718dfdcbdbb2aae40221') in 0.018950 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 10.510728 seconds.
+  path: Assets/Models/Mellarius/Textures
+  artifactKey: Guid(94c3e552e513d4d4eb77eb9257549ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures using Guid(94c3e552e513d4d4eb77eb9257549ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd22814dc31721f6615e3b1d8d6b25f72') in 0.000600 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 17.944895 seconds.
+  path: Assets/Models/Mellarius/Materials
+  artifactKey: Guid(0dbd09a179983d4479af48cfbdf1571c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Materials using Guid(0dbd09a179983d4479af48cfbdf1571c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18b544c86a8826bdba81da1d7a2c50b') in 0.000589 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 15.168107 seconds.
+  path: Assets/Models/Mellarius/Bag_M.mat
+  artifactKey: Guid(8243a6133131d5a4a89cade8e41e4f1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Bag_M.mat using Guid(8243a6133131d5a4a89cade8e41e4f1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '443290b647505222a8695872a593f095') in 0.027119 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Models/Mellarius/Hair_M.mat
+  artifactKey: Guid(032e17f7a627d8946ad5ece53bed1444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Hair_M.mat using Guid(032e17f7a627d8946ad5ece53bed1444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a160dbae2b49e90f2918694f8ee1ee84') in 0.027051 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Models/Mellarius/Brows_M.mat
+  artifactKey: Guid(d17079ee621a1b24ba56b98398280770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Brows_M.mat using Guid(d17079ee621a1b24ba56b98398280770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f950713d2d3961e272c13857c229d14') in 0.021264 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Models/Mellarius/Metal_M.mat
+  artifactKey: Guid(2ec8c006ba5d9cc498985c6f8c2c4e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Metal_M.mat using Guid(2ec8c006ba5d9cc498985c6f8c2c4e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bca9b562dd30d97199173bc0a448e13') in 0.074395 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Models/Mellarius/Jeans_M.mat
+  artifactKey: Guid(02ac47eb8f4461f4684c77c19499f01a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Jeans_M.mat using Guid(02ac47eb8f4461f4684c77c19499f01a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '100bba544a602d2ee0e8bf19e5ad04a4') in 0.019293 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 17.406318 seconds.
+  path: Assets/Models/Mellarius/Textures/Bag_M.mat
+  artifactKey: Guid(8243a6133131d5a4a89cade8e41e4f1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Bag_M.mat using Guid(8243a6133131d5a4a89cade8e41e4f1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'deb1eae30de9b2367d1995d6036be142') in 0.021960 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Models/Mellarius/Textures/Hair_M.mat
+  artifactKey: Guid(032e17f7a627d8946ad5ece53bed1444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Hair_M.mat using Guid(032e17f7a627d8946ad5ece53bed1444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6411bf1d9e6a2f4bdf0f55c21a0c1540') in 0.018306 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Models/Mellarius/Textures/Brows_M.mat
+  artifactKey: Guid(d17079ee621a1b24ba56b98398280770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Brows_M.mat using Guid(d17079ee621a1b24ba56b98398280770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ade7a454b0f4027ee465bb33c45d24b0') in 0.020462 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/Mellarius/Textures/Metal_M.mat
+  artifactKey: Guid(2ec8c006ba5d9cc498985c6f8c2c4e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Metal_M.mat using Guid(2ec8c006ba5d9cc498985c6f8c2c4e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f80512427cb175a738e750b0382ca690') in 0.017876 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Models/Mellarius/Textures/Jeans_M.mat
+  artifactKey: Guid(02ac47eb8f4461f4684c77c19499f01a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Jeans_M.mat using Guid(02ac47eb8f4461f4684c77c19499f01a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5bf6aea448fc64b362aa6f255a41e06') in 0.026106 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Models/Mellarius/Textures/Tunic_M.mat
+  artifactKey: Guid(5c664dd618585fd47950753f4c76bcf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Tunic_M.mat using Guid(5c664dd618585fd47950753f4c76bcf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1462f4f15e662504112b90d9662eddee') in 0.055820 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 180.829047 seconds.
+  path: Assets/Models/Mellarius/Textures/Hair_Transparency_Hair Flow Map.png
+  artifactKey: Guid(9715f737eb0924a459705e09420d282f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Hair_Transparency_Hair Flow Map.png using Guid(9715f737eb0924a459705e09420d282f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ed195c4ed8c0222a57c99e39be79f00') in 0.025329 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 24.452411 seconds.
+  path: Assets/Models/Mellarius/Textures/Biker_Jeans_Normal.jpg
+  artifactKey: Guid(484c133057442e745860974aec088516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Biker_Jeans_Normal.jpg using Guid(484c133057442e745860974aec088516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30c51d006e469580b6f8493a3b1c5ca8') in 0.026757 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 28.093258 seconds.
+  path: Assets/Models/Mellarius/Textures/Tunic_Normal.jpg
+  artifactKey: Guid(4810b337139ead14a978eb4af98d45eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Tunic_Normal.jpg using Guid(4810b337139ead14a978eb4af98d45eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1872c4da81b88b1bc31b8173114184f') in 0.019612 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 4.509538 seconds.
+  path: Assets/Models/Mellarius/Textures/Punk_Strap_Boots_Normal.jpg
+  artifactKey: Guid(dea0e9fdf07e53643a9b50bdde3154f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Punk_Strap_Boots_Normal.jpg using Guid(dea0e9fdf07e53643a9b50bdde3154f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9496d10f2a29a5bdcff1203165f642c9') in 0.027366 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 3.246879 seconds.
+  path: Assets/Models/Mellarius/Textures/THD_Strips_OKSG3_Normal.jpg
+  artifactKey: Guid(2f96969f0bff0d44794c1ab4668e280b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/THD_Strips_OKSG3_Normal.jpg using Guid(2f96969f0bff0d44794c1ab4668e280b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a851fd75380f2bfa7fb631e5c6a7cfdc') in 0.023851 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 6.019261 seconds.
+  path: Assets/Models/Mellarius/Textures/THD_Gloves_0212SG_Normal.jpg
+  artifactKey: Guid(570f0d6317471134b97be74ab787c9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/THD_Gloves_0212SG_Normal.jpg using Guid(570f0d6317471134b97be74ab787c9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a212d04c8a5cf56ebd66ec13c8235e37') in 0.020410 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 25.159993 seconds.
+  path: Assets/Models/Mellarius/Textures/THD_Strips_OKSG1_Normal.jpg
+  artifactKey: Guid(0d6c9c246bcee8e4baa88f893741e340) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/THD_Strips_OKSG1_Normal.jpg using Guid(0d6c9c246bcee8e4baa88f893741e340) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c22c4a7a6d2204cefdfe4bd2ffacd2c') in 0.014538 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 52.548779 seconds.
+  path: Assets/Models/Mellarius/Textures/Mellariuss.fbx
+  artifactKey: Guid(c5127b4df842483479037757f9f142fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Mellariuss.fbx using Guid(c5127b4df842483479037757f9f142fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4964304a764e0844c6514f781321d01') in 0.361959 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 236
+========================================================================
+Received Import Request.
+  Time since last request: 58.391528 seconds.
+  path: Assets/Models/Mellarius/Textures/Beard_Transparency_Hair Flow Map.png
+  artifactKey: Guid(c791e656e7e2f95478be4bf37cd3b6f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Textures/Beard_Transparency_Hair Flow Map.png using Guid(c791e656e7e2f95478be4bf37cd3b6f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b37638c8ece997f0a2eb97a31970781') in 0.015473 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 5.168452 seconds.
+  path: Assets/Models/Mellarius/Mellariuss.fbx
+  artifactKey: Guid(c5127b4df842483479037757f9f142fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Mellariuss.fbx using Guid(c5127b4df842483479037757f9f142fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39374ae17af0585851f0f4e9708bb9cc') in 0.344121 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 275
+========================================================================
+Received Import Request.
+  Time since last request: 0.258524 seconds.
+  path: Assets/Models/Mellarius/Materials/Bag_M.mat
+  artifactKey: Guid(8243a6133131d5a4a89cade8e41e4f1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Materials/Bag_M.mat using Guid(8243a6133131d5a4a89cade8e41e4f1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79400a00f80166719391e62afb97dde9') in 0.018701 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Models/Mellarius/Materials/Hair_M.mat
+  artifactKey: Guid(032e17f7a627d8946ad5ece53bed1444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Materials/Hair_M.mat using Guid(032e17f7a627d8946ad5ece53bed1444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cea7fe4276e1395b2d60214b393a785') in 0.028913 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/Mellarius/Materials/Brows_M.mat
+  artifactKey: Guid(d17079ee621a1b24ba56b98398280770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Materials/Brows_M.mat using Guid(d17079ee621a1b24ba56b98398280770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27e98682f50e6b97783070d5c4a1903b') in 0.022413 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Models/Mellarius/Materials/Boots_M.mat
+  artifactKey: Guid(45e1e196c95113d468155fead4455abc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Materials/Boots_M.mat using Guid(45e1e196c95113d468155fead4455abc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90e62d212e1a76144542ee1123068745') in 0.025795 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Models/Mellarius/Materials/Strip_M.mat
+  artifactKey: Guid(8dcc0353cd7494440b6ea372b2647485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Materials/Strip_M.mat using Guid(8dcc0353cd7494440b6ea372b2647485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd65d221d17175df8c74e9dd0a3c74bc4') in 0.019882 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Models/Mellarius/Materials/Tunic_M.mat
+  artifactKey: Guid(5c664dd618585fd47950753f4c76bcf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Materials/Tunic_M.mat using Guid(5c664dd618585fd47950753f4c76bcf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a8ce9bd3bd1fb94f27e8b425f72d37') in 0.027762 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.676 seconds
+Refreshing native plugins compatible for Editor in 2.24 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.325 seconds
+Domain Reload Profiling: 3000ms
+	BeginReloadAssembly (280ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (15ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (67ms)
+	RebuildCommonClasses (62ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (281ms)
+		LoadAssemblies (415ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (24ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (2325ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (886ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (164ms)
+			ProcessInitializeOnLoadAttributes (617ms)
+			ProcessInitializeOnLoadMethodAttributes (89ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (28ms)
+Refreshing native plugins compatible for Editor in 3.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5173 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (319.2 KB). Loaded Objects now: 5877.
+Memory consumption went from 193.7 MB to 193.4 MB.
+Total: 5.851900 ms (FindLiveObjects: 0.584200 ms CreateObjectMapping: 0.864700 ms MarkObjects: 4.027500 ms  DeleteObjects: 0.373600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 195.673598 seconds.
+  path: Assets/Models/Mellarius/Mellariuss.fbx
+  artifactKey: Guid(c5127b4df842483479037757f9f142fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Mellariuss.fbx using Guid(c5127b4df842483479037757f9f142fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c1fa3ec2ac7b00ad0a2fb605b7863ea') in 0.749082 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 295
+========================================================================
+Received Import Request.
+  Time since last request: 16.155273 seconds.
+  path: Assets/Models/Mellarius/Mellariuss.fbx
+  artifactKey: Guid(c5127b4df842483479037757f9f142fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Mellarius/Mellariuss.fbx using Guid(c5127b4df842483479037757f9f142fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e8703b2230be5135689e1a0de708333') in 0.399654 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 277
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.604 seconds
+Refreshing native plugins compatible for Editor in 2.44 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.363 seconds
+Domain Reload Profiling: 1965ms
+	BeginReloadAssembly (197ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (317ms)
+		LoadAssemblies (401ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (26ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1363ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (690ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (78ms)
+			ProcessInitializeOnLoadAttributes (512ms)
+			ProcessInitializeOnLoadMethodAttributes (87ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (29ms)
+Refreshing native plugins compatible for Editor in 3.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5173 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (319.2 KB). Loaded Objects now: 5918.
+Memory consumption went from 195.8 MB to 195.5 MB.
+Total: 4.399600 ms (FindLiveObjects: 0.587000 ms CreateObjectMapping: 0.574100 ms MarkObjects: 3.036600 ms  DeleteObjects: 0.201000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.512 seconds
+Refreshing native plugins compatible for Editor in 3.56 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.371 seconds
+Domain Reload Profiling: 1883ms
+	BeginReloadAssembly (175ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (256ms)
+		LoadAssemblies (322ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (29ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1372ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (780ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (78ms)
+			ProcessInitializeOnLoadAttributes (596ms)
+			ProcessInitializeOnLoadMethodAttributes (94ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (30ms)
+Refreshing native plugins compatible for Editor in 2.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5173 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (319.1 KB). Loaded Objects now: 5922.
+Memory consumption went from 197.7 MB to 197.4 MB.
+Total: 8.575900 ms (FindLiveObjects: 1.068800 ms CreateObjectMapping: 0.979400 ms MarkObjects: 6.312300 ms  DeleteObjects: 0.213300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 134.166176 seconds.
+  path: Assets/Input/PlayerControls.inputactions
+  artifactKey: Guid(1e75a94497c24bb4c865e7ef97f94bc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Input/PlayerControls.inputactions using Guid(1e75a94497c24bb4c865e7ef97f94bc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62ee7ccc4f5cd7f6172b30d3e54d4175') in 0.033661 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.519 seconds
+Refreshing native plugins compatible for Editor in 2.69 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.903 seconds
+Domain Reload Profiling: 2421ms
+	BeginReloadAssembly (177ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (50ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (251ms)
+		LoadAssemblies (326ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1904ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (686ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (91ms)
+			ProcessInitializeOnLoadAttributes (493ms)
+			ProcessInitializeOnLoadMethodAttributes (86ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (29ms)
+Refreshing native plugins compatible for Editor in 2.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5173 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (319.2 KB). Loaded Objects now: 5926.
+Memory consumption went from 199.6 MB to 199.3 MB.
+Total: 6.117000 ms (FindLiveObjects: 0.712400 ms CreateObjectMapping: 0.689400 ms MarkObjects: 4.584600 ms  DeleteObjects: 0.129200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
