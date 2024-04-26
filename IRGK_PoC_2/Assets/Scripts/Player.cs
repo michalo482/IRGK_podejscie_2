@@ -7,6 +7,10 @@ using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
+    [Header("Attack Info")] 
+    public Vector2[] attackMovement;
+    
+    public bool isBusy { get; private set; }
     [Header("Movement Info")] 
     public float moveSpeed;
     public float jumpForce;
@@ -104,11 +108,21 @@ public class Player : MonoBehaviour
         _velocity = Rb.velocity.y;
     }
 
+    public IEnumerator BusyFor(float seconds)
+    {
+        isBusy = true;
+
+        yield return new WaitForSeconds(seconds);
+
+        isBusy = false;
+    }
+
+    public void ZeroVelocity() => Rb.velocity = new Vector3(0, 0);
+
     public void SetVelocity(float xVelocity, float yVelocity)
     {
-        FlipController(xVelocity);
         Rb.velocity = new Vector3(xVelocity, yVelocity);
-        
+        FlipController(xVelocity);
     }
 
     public bool IsGroundDetected() =>
