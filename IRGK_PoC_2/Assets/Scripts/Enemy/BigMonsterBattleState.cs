@@ -19,7 +19,7 @@ public class BigMonsterBattleState : EnemyState
         base.Enter();
         //Debug.Log("jestem zajety");
         //player = GameObject.Find("Player").transform;
-        player = GameObject.FindWithTag("Player")?.transform;
+        player = PlayerManager.instance.player.transform;
     }
 
     public override void Update()

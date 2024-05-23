@@ -13,8 +13,11 @@ public class Entity : MonoBehaviour
     [SerializeField] protected Transform wallCheck;
     [SerializeField] protected float wallCheckDistance;
     [SerializeField] protected LayerMask whatIsGround;
-    
-    
+
+    [Header("Knockback Info")] 
+    [SerializeField] protected Vector3 knockbackDirection;
+    [SerializeField] protected float knockbackDelay = 0.07f;
+    protected bool isKnocked;
     
     protected const int Multiplayer = -1;
     public int FacingDirection { get; private set; } = 1;
@@ -48,9 +51,18 @@ public class Entity : MonoBehaviour
     public virtual void Damage()
     {
         fx.StartCoroutine("FlashFx");
+        StartCoroutine("HitKnockback");
         Debug.Log("jeb w ryj " + gameObject.name);
     }
-    
+
+    protected virtual IEnumerator HitKnockback()
+    {
+        isKnocked = true;
+        Rb.velocity = new Vector3(knockbackDirection.x * -FacingDirection, knockbackDirection.y);
+        yield return new WaitForSeconds(knockbackDelay);
+        isKnocked = false;
+    }
+
     public virtual bool IsGroundDetected() =>
         Physics.Raycast(groundCheck.position, Vector3.down, groundCheckDistance, whatIsGround);
 
@@ -87,11 +99,20 @@ public class Entity : MonoBehaviour
                 break;
         }
     }
-    
-    public virtual void ZeroVelocity() => Rb.velocity = new Vector3(0, 0);
+
+    public virtual void ZeroVelocity()
+    {
+        if(isKnocked)
+            return;
+        Rb.velocity = new Vector3(0, 0);
+    }
+        
 
     public virtual void SetVelocity(float xVelocity, float yVelocity)
     {
+        if(isKnocked)
+            return;
+        
         Rb.velocity = new Vector3(xVelocity, yVelocity);
         FlipController(xVelocity);
     }

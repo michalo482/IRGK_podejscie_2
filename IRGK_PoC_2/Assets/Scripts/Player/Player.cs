@@ -9,6 +9,7 @@ public class Player : Entity
 {
     [Header("Attack Info")] 
     public Vector2[] attackMovement;
+    public float counterAttackDuration = 0.2f;
     
     public bool isBusy { get; private set; }
     [Header("Movement Info")] 
@@ -18,13 +19,14 @@ public class Player : Entity
     [Header("Dash Info")]
     public float dashSpeed;
     public float dashDuration;
-    public float dashCooldown;
     public float dashDirection;
     
     
 
     [SerializeField] private float _velocity;
-
+    
+    public SkillManager skill { get; private set; }
+    public GameObject sword { get; private set; }
     
     
     public float xInput;
@@ -57,6 +59,10 @@ public class Player : Entity
     public PlayerWallJumpState WallJumpState { get; private set; }
     
     public PlayerPrimaryAttackState PrimaryAttackState { get; private set; }
+    public PlayerCounterAttackState CounterAttackState { get; private set; }
+    
+    public PlayerAimSwordState AimSwordState { get; private set; }
+    public PlayerCatchSwordState CatchSwordState { get; private set; }
     
     #endregion
 
@@ -73,12 +79,17 @@ public class Player : Entity
         WallJumpState = new PlayerWallJumpState(this, _stateMachine, "Jump");
 
         PrimaryAttackState = new PlayerPrimaryAttackState(this, _stateMachine, "Attack");
+        CounterAttackState = new PlayerCounterAttackState(this, _stateMachine, "CounterAttack");
+
+        AimSwordState = new PlayerAimSwordState(this, _stateMachine, "AimSword");
+        CatchSwordState = new PlayerCatchSwordState(this, _stateMachine, "CatchSword");
     }
 
     protected override void Start()
     {
         base.Start();
         
+        skill = SkillManager.instance;
         moveSpeed = 9f;
         
         _stateMachine.Initialize(IdleState);
@@ -107,8 +118,15 @@ public class Player : Entity
         isBusy = false;
     }
 
-    
+    public void AssignNewSword(GameObject newSword)
+    {
+        sword = newSword;
+    }
 
+    public void ClearSword()
+    {
+        Destroy(sword);
+    }
     
     public void AnimationTrigger() => _stateMachine.CurrentState.AnimationFinishTrigger();
 
@@ -119,13 +137,13 @@ public class Player : Entity
         if (IsWallDetected())
             return;
         
-        if (dashButton > 0 && stateCooldown < 0)
+        if (dashButton > 0 && SkillManager.instance.dash.CanUseSkill())
         {
             dashDirection = xInput;
             if (dashDirection == 0)
                 dashDirection = FacingDirection;
             _stateMachine.ChangeState(DashState);
-            stateCooldown = dashCooldown;
+            //stateCooldown = dashCooldown;
         }
     }
 }

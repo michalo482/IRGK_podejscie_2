@@ -29,6 +29,16 @@ public class PlayerGroundedState : PlayerState
             player.stateCooldown = player.dashCooldown;
         }*/
 
+        if (Input.GetKeyDown(KeyCode.Mouse1) && HasNoSword())
+        {
+            stateMachine.ChangeState(player.AimSwordState);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            stateMachine.ChangeState(player.CounterAttackState);
+        }
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             stateMachine.ChangeState(player.PrimaryAttackState);
@@ -49,5 +59,15 @@ public class PlayerGroundedState : PlayerState
     public override void Exit()
     {
         base.Exit();
+    }
+
+    private bool HasNoSword()
+    {
+        if (!player.sword)
+        {
+            return true;
+        }
+        player.sword.GetComponent<SwordSkillController>().ReturnSword();
+        return false;
     }
 }

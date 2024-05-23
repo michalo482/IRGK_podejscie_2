@@ -24,4 +24,22 @@ public class EntityFx : MonoBehaviour
 
         smr.material = orginalMat;
     }
+
+    private void RedColorBlink()
+    {
+        if (smr.material.color != Color.white)
+        {
+            smr.material.color = Color.white;
+        }
+        else
+        {
+            smr.material.color = Color.red;
+        }
+    }
+
+    private void CancelRedBlink()
+    {
+        CancelInvoke();
+        smr.material.color = Color.white;
+    }
 }

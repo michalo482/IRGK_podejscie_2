@@ -9,6 +9,7 @@ public class EnemyBigMonster : Enemy
     public BigMonsterMoveState moveState { get; private set; }
     public BigMonsterBattleState battleState { get; private set; }
     public BigMonsterAttackState attackState { get; private set; }
+    public BigMonsterStunState stunState { get; private set; }
     
     
     protected override void Awake()
@@ -18,6 +19,7 @@ public class EnemyBigMonster : Enemy
         moveState = new BigMonsterMoveState(this, StateMachine, "Move", this);
         battleState = new BigMonsterBattleState(this, StateMachine, "Move", this);
         attackState = new BigMonsterAttackState(this, StateMachine, "Attack", this);
+        stunState = new BigMonsterStunState(this, StateMachine, "Stun", this);
     }
 
     protected override void Start()
@@ -29,5 +31,20 @@ public class EnemyBigMonster : Enemy
     protected override void Update()
     {
         base.Update();
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            StateMachine.ChangeState(stunState);
+        }
+    }
+
+    public override bool CanBeStunned()
+    {
+        if (base.CanBeStunned())
+        {
+            StateMachine.ChangeState(stunState);
+            return true;
+        }
+
+        return false;
     }
 }

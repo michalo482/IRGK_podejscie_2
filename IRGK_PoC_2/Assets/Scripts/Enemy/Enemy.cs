@@ -8,6 +8,12 @@ public class Enemy : Entity
     //public Rigidbody Rb { get; private set; }
     //public Animator Animator { get; private set; }
     [SerializeField] protected LayerMask whatIsPlayer;
+    [Header("Stun Info")] 
+    public float stunDuration;
+    public Vector3 stunDirection;
+    protected bool canBeStunned;
+    [SerializeField] protected GameObject counterImage;
+    
     [Header("Move info")] 
     public float moveSpeed;
     public float idleTime;
@@ -40,6 +46,29 @@ public class Enemy : Entity
     {
         Physics.Raycast(wallCheck.position, Vector3.right * FacingDirection, out RaycastHit hit, 50, whatIsPlayer);
         return hit;
+    }
+
+    public virtual void OpenCounterAttackWindow()
+    {
+        canBeStunned = true;
+        counterImage.SetActive(true);
+    }
+
+    public virtual void CloseCounterAttackWindow()
+    {
+        canBeStunned = false;
+        counterImage.SetActive(false);
+    }
+
+    public virtual bool CanBeStunned()
+    {
+        if (canBeStunned)
+        {
+            CloseCounterAttackWindow();
+            return true;
+        }
+
+        return false;
     }
 
     protected override void OnDrawGizmos()

@@ -22,4 +22,7 @@ public class BigMonsterAnimationTriggers : MonoBehaviour
             }
         }
     }
+
+    private void OpenCounterWindow() => enemyBigMonster.OpenCounterAttackWindow();
+    private void CloseCounterWindow() => enemyBigMonster.CloseCounterAttackWindow();
 }
