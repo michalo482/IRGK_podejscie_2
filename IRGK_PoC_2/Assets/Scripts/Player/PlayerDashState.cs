@@ -11,7 +11,7 @@ public class PlayerDashState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.skill.clone.CreateClone(player.Anim.transform);
+        player.skill.clone.CreateClone(player.Anim.transform, Vector3.zero);
         player.gameObject.layer = LayerMask.NameToLayer("Default");
         player.stateTimer = player.dashDuration;
     }

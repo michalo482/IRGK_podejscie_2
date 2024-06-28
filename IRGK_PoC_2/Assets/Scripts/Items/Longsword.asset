@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c61e53708863ced4ba2eccf8aacc0939, type: 3}
+  m_Name: Longsword
+  m_EditorClassIdentifier: 
+  itemType: 1
+  itemName: Longsword
+  icon: {fileID: 21300000, guid: d31aa8412a4d374458c912d11686642a, type: 3}
+  dropChance: 38.1
+  equipmentType: 0
+  itemEffects: []
+  strength: 0
+  agility: 5
+  intelligence: 0
+  vitality: 0
+  damage: 12
+  critChance: 7
+  critPower: 0
+  hp: 0
+  armor: 0
+  evasion: 0
+  magicResistance: 0
+  fireDamage: 0
+  iceDamage: 0
+  lightningDamage: 0
+  craftingMaterials:
+  - data: {fileID: 11400000, guid: ca8119683c9e9ac47bc5024a167a037c, type: 2}
+    stackSize: 1
+  - data: {fileID: 11400000, guid: e4bb454f2fa64c7428e07fdf8a236a12, type: 2}
+    stackSize: 1

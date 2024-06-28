@@ -12,14 +12,19 @@ public class Player : Entity
     public float counterAttackDuration = 0.2f;
     
     public bool isBusy { get; private set; }
+    
     [Header("Movement Info")] 
     public float moveSpeed;
     public float jumpForce;
+    public float swordReturnImpact;
+    private float _defaultMoveSpeed;
+    private float _defaultJumpForce;
     
     [Header("Dash Info")]
     public float dashSpeed;
     public float dashDuration;
     public float dashDirection;
+    private float _defaultDashSpeed;
     
     
 
@@ -63,6 +68,9 @@ public class Player : Entity
     
     public PlayerAimSwordState AimSwordState { get; private set; }
     public PlayerCatchSwordState CatchSwordState { get; private set; }
+    public PlayerBlackholeState BlackholeState { get; private set; }
+    
+    public PlayerDeathState DeathState { get; private set; }
     
     #endregion
 
@@ -83,6 +91,10 @@ public class Player : Entity
 
         AimSwordState = new PlayerAimSwordState(this, _stateMachine, "AimSword");
         CatchSwordState = new PlayerCatchSwordState(this, _stateMachine, "CatchSword");
+
+        BlackholeState = new PlayerBlackholeState(this, _stateMachine, "Jump");
+
+        DeathState = new PlayerDeathState(this, _stateMachine, "Die");
     }
 
     protected override void Start()
@@ -93,6 +105,10 @@ public class Player : Entity
         moveSpeed = 9f;
         
         _stateMachine.Initialize(IdleState);
+
+        _defaultMoveSpeed = moveSpeed;
+        _defaultJumpForce = jumpForce;
+        _defaultDashSpeed = dashSpeed;
     }
 
     protected override void Update()
@@ -107,6 +123,25 @@ public class Player : Entity
         _stateMachine.CurrentState.Update();
         CheckForDashInput();
         _velocity = Rb.velocity.y;
+    }
+
+    public override void SlowEntityBy(float slowPercentage, float slowDuration)
+    {
+        moveSpeed = moveSpeed * (1 - slowPercentage);
+        jumpForce = jumpForce * (1 - slowPercentage);
+        dashSpeed = dashSpeed * (1 - slowPercentage);
+        Anim.speed = Anim.speed * (1 - slowPercentage);
+        
+        Invoke(nameof(ReturnToDefaultSpeed), slowDuration);
+    }
+
+    protected override void ReturnToDefaultSpeed()
+    {
+        base.ReturnToDefaultSpeed();
+
+        moveSpeed = _defaultMoveSpeed;
+        jumpForce = _defaultJumpForce;
+        dashSpeed = _defaultDashSpeed;
     }
 
     public IEnumerator BusyFor(float seconds)
@@ -125,7 +160,13 @@ public class Player : Entity
 
     public void ClearSword()
     {
+        _stateMachine.ChangeState(CatchSwordState);
         Destroy(sword);
+    }
+
+    public void ExitBlackhole()
+    {
+        _stateMachine.ChangeState(AirState);
     }
     
     public void AnimationTrigger() => _stateMachine.CurrentState.AnimationFinishTrigger();
@@ -145,5 +186,11 @@ public class Player : Entity
             _stateMachine.ChangeState(DashState);
             //stateCooldown = dashCooldown;
         }
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        _stateMachine.ChangeState(DeathState);
     }
 }

@@ -18,6 +18,8 @@ public class CloneSkillController : MonoBehaviour
 
     private Transform closestEnemy;
 
+    private Player _player;
+
     private void Awake()
     {
         smr = GetComponentInChildren<SkinnedMeshRenderer>();
@@ -39,18 +41,18 @@ public class CloneSkillController : MonoBehaviour
         }
     }
 
-    public void SetUpClone(Transform newTransform, float cloneDuration, bool canAttack)
+    public void SetUpClone(Transform newTransform, float cloneDuration, bool canAttack, Vector3 _offset, Player player)
     {
         if (canAttack)
         {
             anim.SetInteger("AttackNumber", 1);
         }
-        transform.position = newTransform.position;
+
+        _player = player;
+        transform.position = newTransform.position + _offset;
         //transform.rotation = newTransform.rotation;
         FaceClosestTarget();
         cloneTimer = cloneDuration;
-        
-       
     }
     
     private void AnimationTrigger()
@@ -65,7 +67,8 @@ public class CloneSkillController : MonoBehaviour
         {
             if (hit.GetComponent<Enemy>() != null)
             {
-                hit.GetComponent<Enemy>().Damage();
+                _player.Stats.DoMagicalDamage(hit.GetComponent<CharacterStats>());
+                //hit.GetComponent<Enemy>().DamageEffects();
             }
         }
     }

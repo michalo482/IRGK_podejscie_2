@@ -1,15 +1,42 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+public enum SwordType
+{
+    Regular,
+    Bounce,
+    Pierce,
+    Spin
+}
 public class SwordSkill : Skill
 {
+    public SwordType swordType = SwordType.Regular;
+    
+    [Header("Bounce Info")] 
+    [SerializeField] private int amountOfBounces;
+    [SerializeField] private float bounceGravity;
+    [SerializeField] private float bounceSpeeed;
+
+    [Header("Pierce Info")] 
+    [SerializeField] private int amountOfPierces;
+    [SerializeField] private float pierceGravity;
+
+    [Header("Spin Info")] 
+    [SerializeField] private float hitCooldown = 0.35f;
+    [SerializeField] private float maxTravelDistance = 7f;
+    [SerializeField] private float spinDuration = 2f;
+    [SerializeField] private float spinGravity = 1f;
+    
     [Header("SwordSkill Info")] 
     [SerializeField] private GameObject swordPrefab;
     [FormerlySerializedAs("launchDirection")] [SerializeField] private Vector2 launchForce;
     [SerializeField] private float swordGravity;
     [SerializeField] private Transform handPosition;
+    [SerializeField] private float freezeTimeDuration = 0.7f;
+    [SerializeField] private float returnSpeed;
 
     private Vector2 finalDirection;
 
@@ -35,6 +62,27 @@ public class SwordSkill : Skill
     {
         base.Start();
         GenerateDots();
+        SetUpGravity();
+    }
+
+    private void SetUpGravity()
+    {
+        switch (swordType)
+        {
+            case SwordType.Bounce:
+                swordGravity = bounceGravity;
+                break;
+            case SwordType.Pierce:
+                swordGravity = pierceGravity;
+                break;
+            case SwordType.Spin:
+                swordGravity = spinGravity;
+                break;
+            case SwordType.Regular:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 
     protected override void Update()
@@ -58,8 +106,21 @@ public class SwordSkill : Skill
     {
         GameObject newSword = Instantiate(swordPrefab, handPosition.position, transform.rotation);
         SwordSkillController newSwordScript = newSword.GetComponent<SwordSkillController>();
+
+        if (swordType == SwordType.Bounce)
+        {
+            newSwordScript.SetupBounce(true, amountOfBounces, bounceSpeeed);
+        }
+        else if (swordType == SwordType.Pierce)
+        {
+            newSwordScript.SetupPierce(amountOfPierces);
+        }
+        else if (swordType == SwordType.Spin)
+        {
+            newSwordScript.SetupSpinning(true, maxTravelDistance, spinDuration, hitCooldown);
+        }
         
-        newSwordScript.SetUpSword(finalDirection, swordGravity, player);
+        newSwordScript.SetUpSword(finalDirection, swordGravity, player, freezeTimeDuration, returnSpeed);
         
         player.AssignNewSword(newSword);
         

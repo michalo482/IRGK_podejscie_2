@@ -96,6 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   returnSpeed: 12
+  isBouncing: 1
+  amountOfBounces: 4
+  enemyTargets: []
 --- !u!1001 &3769203397019705554
 PrefabInstance:
   m_ObjectHideFlags: 0

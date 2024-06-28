@@ -11,6 +11,8 @@ public class EnemyBigMonster : Enemy
     public BigMonsterAttackState attackState { get; private set; }
     public BigMonsterStunState stunState { get; private set; }
     
+    public BigMonsterDeathState deathState { get; private set; }
+    
     
     protected override void Awake()
     {
@@ -20,6 +22,7 @@ public class EnemyBigMonster : Enemy
         battleState = new BigMonsterBattleState(this, StateMachine, "Move", this);
         attackState = new BigMonsterAttackState(this, StateMachine, "Attack", this);
         stunState = new BigMonsterStunState(this, StateMachine, "Stun", this);
+        deathState = new BigMonsterDeathState(this, StateMachine, "Stun", this);
     }
 
     protected override void Start()
@@ -46,5 +49,11 @@ public class EnemyBigMonster : Enemy
         }
 
         return false;
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        StateMachine.ChangeState(deathState);
     }
 }

@@ -28,6 +28,10 @@ public class PlayerGroundedState : PlayerState
             stateMachine.ChangeState(player.DashState);
             player.stateCooldown = player.dashCooldown;
         }*/
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            stateMachine.ChangeState(player.BlackholeState);
+        }
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && HasNoSword())
         {

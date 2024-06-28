@@ -18,7 +18,9 @@ public class BigMonsterAnimationTriggers : MonoBehaviour
         {
             if (hit.GetComponent<Player>() != null)
             {
-                hit.GetComponent<Player>().Damage();
+                PlayerStats target = hit.GetComponent<PlayerStats>();
+                enemyBigMonster.Stats.DoDamage(target);
+                //hit.GetComponent<Player>().Damage();
             }
         }
     }
